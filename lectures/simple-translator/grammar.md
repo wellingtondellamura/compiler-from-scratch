@@ -2,16 +2,13 @@
 <expr> ::= <term> <rest>
 <rest> ::= + <term> <rest>
         |  - <term> <rest>
-        |  (nothing)
-<term> ::= 0
-        |  1
-        |  2
-        |  3
-        |  4
-        |  5
-        |  6
-        |  7
-        |  8
-        |  9
+        |  (vazio)
+<term> ::= NUMBER
 
-
+Observar o lookahead
+9 - 5 + 2
+  ^
+lookahead -
+first(+ <term> <rest>) = {+}
+first(- <term> <rest>) = {-}
+first(<rest>) = {+, -, vazio}

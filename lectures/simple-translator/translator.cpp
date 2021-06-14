@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 void error(string);
@@ -10,33 +11,31 @@ void rest();
 void match(char);
 char nextToken();
 
-string input; // = "9-5+2";
+string input; // = "9-5+2";  "9-5+2$"
 //<9> <-> <5> <+> <2>
 // --- ANALISADOR LÉXICO
 int count = 0;
 char nextToken(){
   if (count == input.length())
-    return EOF;
+    return EOF; //(-1) //$
   return input[count++];
 }
 // --- ANALISADOR SINTÁTICO
 char lookahead;
 
-void expr(){
-  term(); rest();
-}
+void expr(){ term(); rest(); }
 
 void rest(){
-  if (lookahead == '-'){
-     //-term rest
-     match('-'); term(); print('-'); rest();
-  } else if (lookahead == '+'){
-    //+term rest
+  if (lookahead == '+'){
+    //+ term rest
     match('+'); term(); print('+'); rest();
+  } else if (lookahead == '-'){
+    //- term rest
+    match('-'); term(); print('-'); rest();
   } else if (lookahead == EOF) {
     //correto
   } else {
-    //syntax 
+    error("era esperado um - ou um +. ");
   }
 }
 
@@ -55,7 +54,7 @@ void term(){
     default: error("Number expected."); return;
   }
 }
-
+// auxiliares
 void match(char c){
   if (lookahead == c) {
     lookahead = nextToken();
@@ -78,6 +77,7 @@ void error(string msg){
 void print(char c){
   cout << c;
 }
+
 // --- ENTRYPOINT
 int main(){
   cout << "$ ";
