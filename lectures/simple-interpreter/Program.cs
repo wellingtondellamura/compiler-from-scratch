@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace simple_translator_v2
+namespace simple_interpreter
 {
     class Program
     {

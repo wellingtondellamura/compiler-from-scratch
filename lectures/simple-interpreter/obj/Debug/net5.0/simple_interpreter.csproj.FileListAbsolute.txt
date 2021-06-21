@@ -1,0 +1,16 @@
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\bin\Debug\net5.0\simple_interpreter.exe
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\bin\Debug\net5.0\simple_interpreter.deps.json
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\bin\Debug\net5.0\simple_interpreter.runtimeconfig.json
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\bin\Debug\net5.0\simple_interpreter.runtimeconfig.dev.json
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\bin\Debug\net5.0\simple_interpreter.dll
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\bin\Debug\net5.0\ref\simple_interpreter.dll
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\bin\Debug\net5.0\simple_interpreter.pdb
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\obj\Debug\net5.0\simple_interpreter.csprojAssemblyReference.cache
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\obj\Debug\net5.0\simple_interpreter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\obj\Debug\net5.0\simple_interpreter.AssemblyInfoInputs.cache
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\obj\Debug\net5.0\simple_interpreter.AssemblyInfo.cs
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\obj\Debug\net5.0\simple_interpreter.csproj.CoreCompileInputs.cache
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\obj\Debug\net5.0\simple_interpreter.dll
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\obj\Debug\net5.0\ref\simple_interpreter.dll
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\obj\Debug\net5.0\simple_interpreter.pdb
+C:\Users\wellington\projects\lectures\compiler-from-scratch\lectures\simple-interpreter\obj\Debug\net5.0\simple_interpreter.genruntimeconfig.cache

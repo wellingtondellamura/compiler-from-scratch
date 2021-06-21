@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "simple_interpreter/1.0.0": {
+        "runtime": {
+          "simple_interpreter.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "simple_interpreter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
