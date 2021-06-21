@@ -77,6 +77,10 @@ namespace simple_interpreter
         Number = 0,
         Sum = 1,
         Sub = 2,
+
+        Var = 3,
+
+        Print = 4,
         EOF = 99,
         Invalid = -1
     }
