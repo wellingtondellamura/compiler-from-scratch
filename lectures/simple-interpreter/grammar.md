@@ -15,10 +15,38 @@
     fact ::= fact MULT fact | fact DIV fact | term  //fatorar à esquerda
     term ::= OPEN expr CLOSE | NUM | VAR
 
-# Extrair os Tokens
-y = 2 + 10;
-<var, y> <eq> <num, 2> <sum> <num, 10> <eol>
+    Cálculo FIRST
+    -------------
+    stmt ::= atr | imp  -> first(stmt) = {VAR, PRINT}
+        -> first(atr) = VAR
+        -> first(imp) = PRINT
 
+    Exemplo de Ajuste (recursão e fatoração)
+    ----------------------------------------
+    * Produção com problemas
+        expr ::= expr SUM expr | expr SUB expr | fact
+
+    * Produção ajustada
+        expr ::= fact rest
+        rest ::= SUM expr | SUB expr | vazio
+
+    * Possível implementação
+    expr(){
+        expr(); rest();
+    }
+    rest(){
+        if (lookahead(SUM))
+            match(SUM); expr();
+        else if (lookahead(SUB))
+            match(SUB); expr();
+        else if (!lookahead(EOF))
+            syntax error; //era esperado um dos símbolos (+, -)
+    }
+# Extrair os Tokens
+y = (2 + 10);
+print(y);
+<var, y> <eq> <open> <num, 2> <sum> <num, 10> <close> <eol>
+<print> <open> <var, y> <close> <eol>
 EOL = ;
 OPEN = parêntesis aberto '('
 CLOSE = parêntesis fechado ')'

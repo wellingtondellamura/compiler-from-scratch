@@ -6,7 +6,12 @@ namespace simple_interpreter
     {
         static void Main(string[] args)
         {
-            var lexer = new SimpleLexer("200-250");
+            var strProgram = "x = 2 + 2;" + '\n' +
+                             "y = 2 / 10;" + '\n' +
+                             "z = x + y;" + '\n' +
+                             "print(z);";
+
+            var lexer = new SimpleLexer(strProgram);
             var parser = new SimpleParser(lexer);
             // try {
                 var res = parser.Expr();
