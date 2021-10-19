@@ -1,4 +1,7 @@
+#Introdução ao ANTLR
 
+**O que é?**
+Um gerador de analisadores léxicos e sintáticos de alto nível. Atualmente é uma ferramenta amplamente utilizada para a construção de linguagens, ferramentas ou frameworks. A partir de uma gramática, o ANTLR é capaz de gerar um analisador sintático completo além de fornecer suporte na construção de árvores de derivação e representações intermediárias.
 
 ##Pré requisitos
 
@@ -14,4 +17,4 @@ https://www.antlr.org/download/antlr-4.9.2-complete.jar
 
 * Visual Studio Code (https://code.visualstudio.com)
 -- https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
-
+-- https://marketplace.visualstudio.com/items?itemName=mike-lischke.vscode-antlr4
