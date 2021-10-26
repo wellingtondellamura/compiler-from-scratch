@@ -40,3 +40,7 @@ https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.402-windows-x64-i
 https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
 
 https://marketplace.visualstudio.com/items?itemName=mike-lischke.vscode-antlr4
+
+## Configuração
+
+https://gist.github.com/wellingtondellamura/518329d56cb46f6ada229ada9ddb9238

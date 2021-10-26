@@ -1,6 +1,7 @@
 {
     "version": "2.0.0",
-    "configurations": [{
+    "configurations": [
+        {
         "name": "antlr4-SimpleGrammar",
         "type": "antlr-debug",
         "request": "launch",
