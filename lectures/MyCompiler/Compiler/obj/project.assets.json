@@ -1,0 +1,103 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Antlr4.Runtime.Standard/4.9.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Antlr4.Runtime.Standard/4.9.3": {
+      "sha512": "wn+a34a9r3jOMxnIWxWJQ7QAbKi+KyZ9YAiEVVw0qII0J4Z6Z9F6a1b8WNzU00LlsIt++nZIz1BokksielrQYA==",
+      "type": "package",
+      "path": "antlr4.runtime.standard/4.9.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "antlr4.runtime.standard.4.9.3.nupkg.sha512",
+        "antlr4.runtime.standard.nuspec",
+        "lib/net45/Antlr4.Runtime.Standard.dll",
+        "lib/net45/Antlr4.Runtime.Standard.xml",
+        "lib/netstandard2.0/Antlr4.Runtime.Standard.dll",
+        "lib/netstandard2.0/Antlr4.Runtime.Standard.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "Antlr4.Runtime.Standard >= 4.9.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\wellington\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\wellington\\projects\\lectures\\compiler-from-scratch\\lectures\\MyCompiler\\Compiler\\Compiler.csproj",
+      "projectName": "Compiler",
+      "projectPath": "C:\\Users\\wellington\\projects\\lectures\\compiler-from-scratch\\lectures\\MyCompiler\\Compiler\\Compiler.csproj",
+      "packagesPath": "C:\\Users\\wellington\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wellington\\projects\\lectures\\compiler-from-scratch\\lectures\\MyCompiler\\Compiler\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\wellington\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "Antlr4.Runtime.Standard": {
+            "target": "Package",
+            "version": "[4.9.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

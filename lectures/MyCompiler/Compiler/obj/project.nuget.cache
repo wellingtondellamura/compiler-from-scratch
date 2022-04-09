@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CC0WZP+72oVcULK+qWOPbDN5Fm1L7jL83AAoKp5msQGhMXFbD5mU3CTvm68fsgDpmpYxZGp+MkRvi55awz4LLw==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\wellington\\projects\\lectures\\compiler-from-scratch\\lectures\\MyCompiler\\Compiler\\Compiler.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wellington\\.nuget\\packages\\antlr4.runtime.standard\\4.9.3\\antlr4.runtime.standard.4.9.3.nupkg.sha512"
+  ],
+  "logs": []
+}
