@@ -48,6 +48,42 @@ public partial class SimpleGrammarBaseListener : ISimpleGrammarListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitProg([NotNull] SimpleGrammarParser.ProgContext context) { }
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="SimpleGrammarParser.line"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLine([NotNull] SimpleGrammarParser.LineContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="SimpleGrammarParser.line"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLine([NotNull] SimpleGrammarParser.LineContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="SimpleGrammarParser.atrib"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterAtrib([NotNull] SimpleGrammarParser.AtribContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="SimpleGrammarParser.atrib"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitAtrib([NotNull] SimpleGrammarParser.AtribContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="SimpleGrammarParser.print"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterPrint([NotNull] SimpleGrammarParser.PrintContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="SimpleGrammarParser.print"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitPrint([NotNull] SimpleGrammarParser.PrintContext context) { }
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="SimpleGrammarParser.expr"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -72,17 +108,47 @@ public partial class SimpleGrammarBaseListener : ISimpleGrammarListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitTerm([NotNull] SimpleGrammarParser.TermContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="SimpleGrammarParser.fact"/>.
+	/// Enter a parse tree produced by the <c>factNum</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterFact([NotNull] SimpleGrammarParser.FactContext context) { }
+	public virtual void EnterFactNum([NotNull] SimpleGrammarParser.FactNumContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="SimpleGrammarParser.fact"/>.
+	/// Exit a parse tree produced by the <c>factNum</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitFact([NotNull] SimpleGrammarParser.FactContext context) { }
+	public virtual void ExitFactNum([NotNull] SimpleGrammarParser.FactNumContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by the <c>factVar</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterFactVar([NotNull] SimpleGrammarParser.FactVarContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>factVar</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitFactVar([NotNull] SimpleGrammarParser.FactVarContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by the <c>factExpr</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterFactExpr([NotNull] SimpleGrammarParser.FactExprContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by the <c>factExpr</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitFactExpr([NotNull] SimpleGrammarParser.FactExprContext context) { }
 
 	/// <inheritdoc/>
 	/// <remarks>The default implementation does nothing.</remarks>

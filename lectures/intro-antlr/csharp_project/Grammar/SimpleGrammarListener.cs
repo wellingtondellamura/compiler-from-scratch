@@ -42,6 +42,36 @@ public interface ISimpleGrammarListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitProg([NotNull] SimpleGrammarParser.ProgContext context);
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="SimpleGrammarParser.line"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLine([NotNull] SimpleGrammarParser.LineContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="SimpleGrammarParser.line"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLine([NotNull] SimpleGrammarParser.LineContext context);
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="SimpleGrammarParser.atrib"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterAtrib([NotNull] SimpleGrammarParser.AtribContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="SimpleGrammarParser.atrib"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitAtrib([NotNull] SimpleGrammarParser.AtribContext context);
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="SimpleGrammarParser.print"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterPrint([NotNull] SimpleGrammarParser.PrintContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="SimpleGrammarParser.print"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitPrint([NotNull] SimpleGrammarParser.PrintContext context);
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="SimpleGrammarParser.expr"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -62,14 +92,40 @@ public interface ISimpleGrammarListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitTerm([NotNull] SimpleGrammarParser.TermContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="SimpleGrammarParser.fact"/>.
+	/// Enter a parse tree produced by the <c>factNum</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterFact([NotNull] SimpleGrammarParser.FactContext context);
+	void EnterFactNum([NotNull] SimpleGrammarParser.FactNumContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="SimpleGrammarParser.fact"/>.
+	/// Exit a parse tree produced by the <c>factNum</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitFact([NotNull] SimpleGrammarParser.FactContext context);
+	void ExitFactNum([NotNull] SimpleGrammarParser.FactNumContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>factVar</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFactVar([NotNull] SimpleGrammarParser.FactVarContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>factVar</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFactVar([NotNull] SimpleGrammarParser.FactVarContext context);
+	/// <summary>
+	/// Enter a parse tree produced by the <c>factExpr</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFactExpr([NotNull] SimpleGrammarParser.FactExprContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>factExpr</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFactExpr([NotNull] SimpleGrammarParser.FactExprContext context);
 }
 } // namespace Grammar

@@ -39,6 +39,24 @@ public interface ISimpleGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitProg([NotNull] SimpleGrammarParser.ProgContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="SimpleGrammarParser.line"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLine([NotNull] SimpleGrammarParser.LineContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="SimpleGrammarParser.atrib"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAtrib([NotNull] SimpleGrammarParser.AtribContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="SimpleGrammarParser.print"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPrint([NotNull] SimpleGrammarParser.PrintContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="SimpleGrammarParser.expr"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -51,10 +69,25 @@ public interface ISimpleGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitTerm([NotNull] SimpleGrammarParser.TermContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="SimpleGrammarParser.fact"/>.
+	/// Visit a parse tree produced by the <c>factNum</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitFact([NotNull] SimpleGrammarParser.FactContext context);
+	Result VisitFactNum([NotNull] SimpleGrammarParser.FactNumContext context);
+	/// <summary>
+	/// Visit a parse tree produced by the <c>factVar</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFactVar([NotNull] SimpleGrammarParser.FactVarContext context);
+	/// <summary>
+	/// Visit a parse tree produced by the <c>factExpr</c>
+	/// labeled alternative in <see cref="SimpleGrammarParser.fact"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFactExpr([NotNull] SimpleGrammarParser.FactExprContext context);
 }
 } // namespace Grammar

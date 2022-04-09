@@ -8,20 +8,35 @@ namespace csharp_project
     {
         static void Main(string[] args)
         {
-            var text = "1  +2 ;";
+            Console.Write("Entrada: ");
+            var text = Console.ReadLine();
+            
             AntlrInputStream inputStream = new AntlrInputStream(text);
             SimpleGrammarLexer lexer = new SimpleGrammarLexer(inputStream);
-            // var tokens = lexer.GetAllTokens();
-            // foreach (var t in tokens)
-            // {
-            //     Console.WriteLine(t);
-            // }
+
             BufferedTokenStream tokenStream = new BufferedTokenStream(lexer);
             SimpleGrammarParser parser = new SimpleGrammarParser(tokenStream);
+            parser.RemoveErrorListeners();
+            var el = new MyErrorListener();
+            parser.AddErrorListener(el);
+            var pl = new MyListener();
+            parser.AddParseListener(pl);
             
-            parser.AddParseListener(new MyListener());
+            try {
+                var expr = parser.expr();
+                if (pl.SemanticErrors.Count > 0){
+                    
+                }
+                if (el.HasErrors){
 
-            var prog = parser.prog();
+                }
+                var visitor= new MyVisitor();
+                visitor.Visit(expr);
+
+                Console.WriteLine("Resultado: "+ expr.value);
+            } catch(Exception e){
+                Console.WriteLine("Erro Sintático:" + e.Message);
+            }
         }
     }
 }
